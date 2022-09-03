@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="677.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.ed.aerolinea.controller.GestionEquipajeController">
+   <children>
+      <SplitPane dividerPositions="0.23214285714285715" layoutX="1.0" layoutY="1.0" orientation="VERTICAL" prefHeight="691.0" prefWidth="748.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="746.0">
+               <children>
+                  <ImageView fitHeight="140.0" fitWidth="489.0" layoutX="34.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../pictures/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnSalir" layoutX="578.0" layoutY="14.0" mnemonicParsing="false" onAction="#salirApp" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #393FC6;" text="SALIR">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#16b9ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="btnMenu" layoutX="578.0" layoutY="81.0" mnemonicParsing="false" onAction="#mostrarMenu" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #393FC6;" text="MENÚ">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#16b9ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow color="#ff0404" />
+               </effect>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane layoutY="-1.0" prefHeight="532.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Gestion Equipajes">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="750.0">
+                                 <children>
+                                    <ImageView fitHeight="526.0" fitWidth="750.0" layoutY="-1.0" opacity="0.61">
+                                       <image>
+                                          <Image url="@../pictures/equipaje.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="25.0" layoutY="62.0" text="Numero de Tiquete:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtNumTiquete" layoutX="184.0" layoutY="62.0" prefHeight="25.0" prefWidth="154.0" />
+                                    <ImageView fitHeight="210.0" fitWidth="326.0" layoutX="417.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../pictures/equipajemedidas.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="30.0" layoutY="184.0" text="Numero de Piezas:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="132.0" layoutY="150.0" text="Equipaje Disponible:" underline="true">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="105.0" text="Tipo de Viaje:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtTipoViaje" layoutX="130.0" layoutY="104.0" prefHeight="25.0" prefWidth="249.0" text="-">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtNumPiezasMaximo" layoutX="226.0" layoutY="184.0" prefHeight="25.0" prefWidth="59.0" text="-">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="30.0" layoutY="217.0" text="Peso Maximo Por Pieza:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtPesoMaximo" layoutX="224.0" layoutY="217.0" prefHeight="25.0" prefWidth="63.0" text="-">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="243.0" layoutY="251.0" text="Diligenciamiento de Equipaje:" underline="true">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="30.0" layoutY="293.0" text="Numero de Piezas:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtNumPiezas" layoutX="175.0" layoutY="293.0" prefHeight="25.0" prefWidth="41.0" />
+                                    <Label layoutX="231.0" layoutY="293.0" text="Peso Pieza 1:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtPesoPieza1" layoutX="334.0" layoutY="293.0" prefHeight="25.0" prefWidth="61.0" />
+                                    <TextField fx:id="txtPesoPieza2" layoutX="605.0" layoutY="293.0" prefHeight="25.0" prefWidth="61.0" />
+                                    <Label layoutX="425.0" layoutY="293.0" text="Peso Pieza 2 (SI APLICA):">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <RadioButton fx:id="radiobtnMascota" layoutX="552.0" layoutY="359.0" mnemonicParsing="false" text="Viaja con Mascota">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <Label layoutX="530.0" layoutY="390.0" text="Peso Mascota:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtPesoMascota" layoutX="639.0" layoutY="390.0" prefHeight="25.0" prefWidth="76.0" />
+                                    <Separator layoutX="413.0" layoutY="6.0" orientation="VERTICAL" prefHeight="176.0" prefWidth="3.0" />
+                                    <Button fx:id="btnAgregarEquipaje" layoutX="533.0" layoutY="439.0" mnemonicParsing="false" onAction="#agregarEquipaje" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #393FC6;" text="AGREGAR EQUIPAJE">
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#16b9ff" />
+                                                <Stop color="WHITE" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Button>
+                                    <TextField fx:id="txtAnchoP1" layoutX="80.0" layoutY="415.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="27.0" layoutY="419.0" text="Ancho:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtLargoP1" layoutX="80.0" layoutY="452.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="27.0" layoutY="456.0" text="Largo:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="381.0" text="Alto:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtAltoP1" layoutX="80.0" layoutY="377.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="28.0" layoutY="351.0" text="Dimensiones P1 (CM):" underline="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtAnchoP2" layoutX="240.0" layoutY="418.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="189.0" layoutY="420.0" text="Ancho:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtLargoP2" layoutX="240.0" layoutY="455.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="189.0" layoutY="457.0" text="Largo:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="189.0" layoutY="382.0" text="Alto:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtAltoP2" layoutX="240.0" layoutY="380.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="189.0" layoutY="351.0" text="Dimensiones P2 (CM):" underline="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtAnchoM" layoutX="403.0" layoutY="419.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="348.0" layoutY="419.0" text="Ancho:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtLargoM" layoutX="403.0" layoutY="456.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="348.0" layoutY="456.0" text="Largo:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="348.0" layoutY="381.0" text="Alto:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtAltoM" layoutX="403.0" layoutY="320.0" prefHeight="25.0" prefWidth="40.0" />
+                                    <Label layoutX="346.0" layoutY="351.0" text="Dimensiones Mano (CM):" underline="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutX="171.0" layoutY="356.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="2.0" />
+                                    <Separator layoutX="331.0" layoutY="355.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="2.0" />
+                                    <Separator layoutX="509.0" layoutY="358.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="2.0" />
+                                    <Label layoutX="25.0" layoutY="22.0" text="Documento Cliente:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtIdCliente" layoutX="184.0" layoutY="22.0" prefHeight="25.0" prefWidth="216.0" />
+                                    <Button layoutX="350.0" layoutY="62.0" mnemonicParsing="false" onAction="#buscarTiquete" text="Buscar" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="618.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.ed.aerolinea.controller.CompraTiqueteController">
+   <children>
+      <SplitPane dividerPositions="0.23214285714285715" layoutX="1.0" layoutY="1.0" orientation="VERTICAL" prefHeight="618.0" prefWidth="748.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="746.0">
+               <children>
+                  <ImageView fitHeight="140.0" fitWidth="489.0" layoutX="34.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../pictures/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnSalir" layoutX="578.0" layoutY="14.0" mnemonicParsing="false" onAction="#salirApp" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #393FC6;" text="SALIR">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#16b9ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="btnMenu" layoutX="578.0" layoutY="81.0" mnemonicParsing="false" onAction="#mostrarMenu" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #393FC6;" text="MENÚ">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#16b9ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow color="#ff0404" />
+               </effect>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane layoutY="-1.0" prefHeight="509.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Compra de Tiquete">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="417.0" prefWidth="750.0">
+                                 <children>
+                                    <ImageView fitHeight="444.0" fitWidth="750.0" layoutY="-1.0" opacity="0.61">
+                                       <image>
+                                          <Image url="@../pictures/avion.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="50.0" layoutY="30.0" text="Modalidad del Viaje:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <SplitMenuButton fx:id="btnModalidad" layoutX="224.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #393FC6;" text="Elija una opción" textFill="#393fc6">
+                                      <items>
+                                        <MenuItem fx:id="optSoloIda" mnemonicParsing="false" onAction="#elegirSoloIda" text="Sólo Ida" />
+                                        <MenuItem fx:id="optIdaVenida" mnemonicParsing="false" onAction="#elegirIdaVenida" text="Ida y Venida" />
+                                      </items>
+                                    </SplitMenuButton>
+                                    <SplitMenuButton fx:id="btnCiudadOrigen" layoutX="225.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #393FC6;" text="Elija una opción" textFill="#393fc6">
+                                       <items>
+                                          <MenuItem fx:id="optCDMX" mnemonicParsing="false" onAction="#elegirCDMX" text="CDMX" />
+                                       </items>
+                                    </SplitMenuButton>
+                                    <Label layoutX="52.0" layoutY="67.0" text="Ciudad de Origen:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="388.0" layoutY="67.0" text="Ciudad de Destino:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <SplitMenuButton fx:id="btnCiudadDestino" layoutX="542.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #393FC6;" text="Elija una opción" textFill="#393fc6">
+                                       <items>
+                                          <MenuItem fx:id="optMonterrey" mnemonicParsing="false" onAction="#elegirMonterrey" text="Monterrey" />
+                                          <MenuItem fx:id="optCancun" mnemonicParsing="false" onAction="#elegirCancun" text="Cancún" />
+                                          <MenuItem fx:id="optBuenosAires" mnemonicParsing="false" onAction="#elegirBuenosAires" text="Buenos Aires" />
+                                          <MenuItem fx:id="optAngeles" mnemonicParsing="false" onAction="#elegirAngeles" text="Los Ángeles" />
+                                          <MenuItem fx:id="optBogota" mnemonicParsing="false" onAction="#elegirBogota" text="Bogotá" />
+                                          <MenuItem fx:id="optPanama" mnemonicParsing="false" onAction="#elegirPanama" text="Panamá" />
+                                       </items>
+                                    </SplitMenuButton>
+                                    <SplitMenuButton fx:id="btnClaseServicio" layoutX="541.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: #393FC6;" text="Elija una opción" textFill="#393fc6">
+                                       <items>
+                                          <MenuItem fx:id="optEjecutivo" mnemonicParsing="false" onAction="#elegirEjecutivo" text="Ejecutivo" />
+                                          <MenuItem fx:id="optEconomico" mnemonicParsing="false" onAction="#elegirEconomico" text="Económico" />
+                                       </items>
+                                    </SplitMenuButton>
+                                    <Label layoutX="386.0" layoutY="30.0" text="Clase de Servicio:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="52.0" layoutY="106.0" text="Fecha de Inicio:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="fechaInicio" layoutX="225.0" layoutY="110.0" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #393FC6;" />
+                                    <DatePicker fx:id="fechaRegreso" layoutX="542.0" layoutY="108.0" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #393FC6;" />
+                                    <Label layoutX="391.0" layoutY="106.0" text="Fecha de Regreso:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="216.0" layoutY="157.0" text="Cantidad de Personas:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <SplitMenuButton fx:id="btnCantidadPersonas" layoutX="389.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #393FC6;" text="Elija una opción" textFill="#393fc6">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar1Persona" text="1" />
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar2Persona" text="2" />
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar3Persona" text="3" />
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar4Persona" text="4" />
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar5Persona" text="5" />
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar6Persona" text="6" />
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar7Persona" text="7" />
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar8Persona" text="8" />
+                                          <MenuItem mnemonicParsing="false" onAction="#seleccionar9Persona" text="9" />
+                                       </items>
+                                    </SplitMenuButton>
+                                    <TableView fx:id="tableOpcionesVuelo" layoutX="52.0" layoutY="199.0" prefHeight="183.0" prefWidth="629.0">
+                                      <columns>
+                                        <TableColumn fx:id="columnOrigen" prefWidth="100.0" text="Origen" />
+                                        <TableColumn fx:id="columnDestino" prefWidth="118.0" text="Destino" />
+                                          <TableColumn fx:id="columnDuracion" prefWidth="111.0" text="Duracion" />
+                                          <TableColumn fx:id="columnCostoPersona" prefWidth="160.0" text="Costo por Persona" />
+                                          <TableColumn fx:id="columnCosto" prefWidth="139.0" text="Costo Total" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="btnComprarTiquete" layoutX="305.0" layoutY="391.0" mnemonicParsing="false" onAction="#comprarTiquete" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: #393FC6;" text="COMPRAR">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#16b9ff" />
+                                                <Stop color="WHITE" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

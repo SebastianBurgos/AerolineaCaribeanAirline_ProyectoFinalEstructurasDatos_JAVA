@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="395.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.ed.aerolinea.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="415.0" fitWidth="395.0" opacity="0.33" pickOnBounds="true">
+         <image>
+            <Image url="@../pictures/fondodetallesvuelo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="100.0" layoutY="16.0" text="MENÚ PRINCIPAL" underline="true">
+         <font>
+            <Font name="Aparajita Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAsignarTripulacion" layoutX="78.0" layoutY="150.0" mnemonicParsing="false" onAction="#mostrarVentanaAsignacionTripulacion" prefHeight="43.0" prefWidth="249.0" style="-fx-background-color: #393FC6;" text="ASIGNAR TRIPULACIÓN">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#16b9ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnComprarTiquetes" layoutX="78.0" layoutY="74.0" mnemonicParsing="false" onAction="#mostrarVentanaCompraTiquetes" prefHeight="43.0" prefWidth="249.0" style="-fx-background-color: #393FC6;" text="COMPRAR TIQUETES">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#16b9ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnSalir" layoutX="339.0" layoutY="14.0" mnemonicParsing="false" onAction="#salir" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #393FC6;" text="X">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Aparajita Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#16b9ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnGestionarEquipajes" layoutX="78.0" layoutY="227.0" mnemonicParsing="false" onAction="#mostrarVentanaGestionEquipajes" prefHeight="43.0" prefWidth="249.0" style="-fx-background-color: #393FC6;" text="GESTIONAR EQUIPAJES">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#16b9ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnEmbarque" layoutX="78.0" layoutY="305.0" mnemonicParsing="false" onAction="#mostrarVentanaEmbarque" prefHeight="43.0" prefWidth="249.0" style="-fx-background-color: #393FC6;" text="EMBARQUE">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#16b9ff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>

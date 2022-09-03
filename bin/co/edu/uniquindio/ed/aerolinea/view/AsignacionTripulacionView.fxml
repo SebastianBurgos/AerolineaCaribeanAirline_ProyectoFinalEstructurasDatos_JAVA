@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="618.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.ed.aerolinea.controller.AsignacionTripulacionController">
+   <children>
+      <SplitPane dividerPositions="0.17694805194805194" layoutX="1.0" layoutY="1.0" orientation="VERTICAL" prefHeight="618.0" prefWidth="748.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="117.0" prefWidth="746.0">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="489.0" layoutX="34.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../pictures/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnSalir" layoutX="578.0" layoutY="14.0" mnemonicParsing="false" onAction="#salirApp" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #393FC6;" text="SALIR">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#16b9ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="btnMenu" layoutX="578.0" layoutY="60.0" mnemonicParsing="false" onAction="#mostrarMenu" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #393FC6;" text="MENÚ">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#16b9ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow color="#ff0404" />
+               </effect>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane layoutY="-1.0" prefHeight="509.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Asginación Tripulacion">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="417.0" prefWidth="750.0">
+                                 <children>
+                                    <ImageView fitHeight="477.0" fitWidth="750.0" layoutY="-1.0" opacity="0.68">
+                                       <image>
+                                          <Image url="@../pictures/tripulacion.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <TableView fx:id="tableVuelos" layoutX="16.0" layoutY="48.0" prefHeight="131.0" prefWidth="409.0">
+                                      <columns>
+                                        <TableColumn fx:id="columnOrigen" prefWidth="82.0" text="Origen" />
+                                        <TableColumn fx:id="columnDestino" prefWidth="136.0" text="Destino" />
+                                          <TableColumn fx:id="columnHoraSalida" prefWidth="102.0" text="Hora Salida" />
+                                          <TableColumn fx:id="columnAvion" prefWidth="88.0" text="Avion" />
+                                      </columns>
+                                    </TableView>
+                                    <Label layoutX="153.0" layoutY="14.0" text="Seleccione el Vuelo:">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="541.0" layoutY="42.0" text="Seleccione el Piloto:">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tablePilotos" layoutX="459.0" layoutY="68.0" prefHeight="76.0" prefWidth="277.0">
+                                       <columns>
+                                          <TableColumn fx:id="columnNombrePiloto" prefWidth="151.0" text="Nombre" />
+                                          <TableColumn fx:id="columnIdPiloto" prefWidth="125.0" text="Identificación" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="465.0" layoutY="8.0" text="Tripulacion Asignada:">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tableCopilotos" layoutX="459.0" layoutY="171.0" prefHeight="76.0" prefWidth="277.0">
+                                       <columns>
+                                          <TableColumn fx:id="columnNombreCopiloto" prefWidth="151.0" text="Nombre" />
+                                          <TableColumn fx:id="columnIdCopiloto" prefWidth="125.0" text="Identificación" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="518.0" layoutY="144.0" text="Seleccione el Copiloto:">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="504.0" layoutY="251.0" text="Auxiliares Seleccionados:">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tableAuxiliaresSeleccionados" layoutX="459.0" layoutY="279.0" prefHeight="112.0" prefWidth="277.0">
+                                       <columns>
+                                          <TableColumn fx:id="columnNombreAuxiliaresSeleccionados" prefWidth="151.0" text="Nombre" />
+                                          <TableColumn fx:id="columnIdAuxiliaresSeleccionados" prefWidth="125.0" text="Identificación" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="138.0" layoutY="183.0" text="Seleccione los Auxiliares:">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnFinalizarAsignacion" layoutX="498.0" layoutY="411.0" mnemonicParsing="false" onAction="#finalizarAsignacion" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #393FC6;" text="FINALIZAR ASIGNACIÓN">
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#16b9ff" />
+                                                <Stop color="WHITE" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Button>
+                                    <Label layoutX="63.0" layoutY="206.0" text="Seleccione un auxiliar y presione el boton &quot;seleccionar &#10;auxiliar&quot; hasta que agrege la cantidad necesaria de &#10;auxiliares, luego presione el boton de finalizar&#10;asignación.">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnSeleccionarAuxiliar" layoutX="138.0" layoutY="414.0" mnemonicParsing="false" onAction="#seleccionarAuxiliar" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #393FC6;" text="SELECCIONAR AUXILIAR">
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#16b9ff" />
+                                                <Stop color="WHITE" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Button>
+                                    <TableView fx:id="tableAuxiliares" layoutX="59.0" layoutY="286.0" prefHeight="112.0" prefWidth="312.0">
+                                       <columns>
+                                          <TableColumn fx:id="columnNombreAuxiliares" prefWidth="174.0" text="Nombre" />
+                                          <TableColumn fx:id="columnIdAuxiliares" prefWidth="137.0" text="Identificación" />
+                                       </columns>
+                                    </TableView>
+                                    <ImageView fitHeight="70.0" fitWidth="79.0" layoutX="375.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../pictures/flecha.png" />
+                                       </image></ImageView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
